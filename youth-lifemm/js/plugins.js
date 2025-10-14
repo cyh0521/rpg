@@ -9,5 +9,6 @@ var $plugins =
 {"name":"ChoiceOffset","status":true,"description":"調整選擇項目視窗與螢幕邊緣的距離","parameters":{"Offset X":"128"}},
 {"name":"ShowPlayerScore","status":true,"description":"顯示角色名稱與分數（名稱靠左、分數靠右，手動控制）v1.4","parameters":{}},
 {"name":"ShowFloatingScore","status":true,"description":"顯示浮動文字（玩家或事件頭上，手動控制顯示／立即移除）v1.0","parameters":{}},
-{"name":"ShowFirework","status":true,"description":"","parameters":{}}
+{"name":"ShowFirework","status":true,"description":"","parameters":{}},
+{"name":"Confetti","status":true,"description":"","parameters":{}}
 ];
