@@ -8,6 +8,6 @@ var $plugins =
 {"name":"ShowPlayerScore","status":true,"description":"顯示角色名稱與分數（名稱靠左、分數靠右，手動控制）v1.4","parameters":{}},
 {"name":"ShowFloatingScore","status":true,"description":"顯示浮動文字（玩家或事件頭上，手動控制顯示／立即移除）v1.0","parameters":{}},
 {"name":"ShowFirework","status":true,"description":"","parameters":{}},
-{"name":"ExitCommand","status":true,"description":"在主選單新增「退出遊戲」選項，按下即可關閉遊戲","parameters":{}},
-{"name":"OpheliaEnigma_FullscreenResolution","status":true,"description":"Allows the developer to set a specific resolution throughout the game\r\nand start it in fullscreen.","parameters":{"width":"1280","height":"720"}}
+{"name":"OpheliaEnigma_FullscreenResolution","status":true,"description":"Allows the developer to set a specific resolution throughout the game\r\nand start it in fullscreen.","parameters":{"width":"1280","height":"720"}},
+{"name":"ExitCommand","status":true,"description":"在主選單新增「退出遊戲」選項（不干擾BGM播放，支援網頁版）","parameters":{}}
 ];
