@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>國防縱橫・全民國防教育填字遊戲</title>
+<title>國防縱橫・Boardgame Cards</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -165,6 +165,303 @@ body{padding-top:92px}
   .stat span{font-size:10px}
 }
 
+
+/* =========================
+   Boardgame Cards Theme
+   ========================= */
+:root{
+  --bg:#20252a;
+  --surface:#f4efe4;
+  --surface2:#e9e1d2;
+  --border:#8e806a;
+  --text:#263038;
+  --soft:#5d666d;
+  --muted:#858b8f;
+  --accent:#4f7a6d;
+  --accent2:#31534a;
+  --amber:#d39d3e;
+  --danger:#b95d53;
+  --correct:#6e9d72;
+  --cell:42px;
+}
+html,body{
+  background:
+    radial-gradient(circle at 20% 15%,rgba(255,255,255,.035),transparent 22%),
+    radial-gradient(circle at 80% 85%,rgba(255,255,255,.03),transparent 18%),
+    #20252a;
+  color:var(--text);
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.16;
+  background:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0 2px,transparent 2px 7px);
+}
+.top{
+  background:rgba(29,34,38,.96);
+  border-bottom:1px solid rgba(255,255,255,.10);
+  box-shadow:0 8px 24px rgba(0,0,0,.28);
+}
+.mark{
+  background:#d9a84b;
+  color:#2d2a24;
+  border-radius:12px;
+  transform:rotate(-3deg);
+  box-shadow:0 4px 0 #8c692a,0 10px 22px rgba(0,0,0,.24);
+}
+.brand h1{color:#fff8e8}
+.sub{color:#d7b86f}
+.home-btn,.help-btn{
+  background:#31383e;
+  border-color:#56616a;
+  color:#e7e5df;
+  box-shadow:0 3px 0 #171a1d;
+}
+.home-btn:hover,.help-btn:hover{background:#3d474f}
+.stat{
+  background:#2d343a;
+  border-color:#505c65;
+  box-shadow:0 3px 0 #171a1d;
+}
+.stat b{color:#f4d889}
+.stat span{color:#c3c9cc}
+.home-screen{
+  min-height:calc(100vh - 92px);
+  padding:10px 12px 28px;
+}
+.home-screen:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 50% 12%,rgba(235,199,116,.08),transparent 24%);
+}
+.home-shell{position:relative;z-index:1}
+.home-emblem{
+  background:#d6aa57;
+  color:#2f2b24;
+  border:2px solid #f2d790;
+  box-shadow:0 5px 0 #8d6b2e,0 12px 24px rgba(0,0,0,.20);
+  transform:rotate(-2deg);
+}
+.home-title-wrap:before,.home-title-wrap:after{
+  background:linear-gradient(90deg,transparent,#d6aa57);
+}
+.home-hero h1{
+  color:#fff8e8;
+  font-family:'Noto Serif TC',serif;
+  font-weight:700;
+  text-shadow:0 3px 0 rgba(0,0,0,.28);
+}
+.home-hero h1:after{
+  background:linear-gradient(90deg,transparent,#d6aa57,transparent);
+}
+.home-en{color:#d5c49e}
+.category-grid{gap:18px}
+.category-card{
+  --card1:#527ca6;
+  --card2:#34506f;
+  min-height:220px;
+  border-radius:18px;
+  border:3px solid rgba(255,255,255,.38);
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.18),transparent 36%),
+    linear-gradient(160deg,var(--card1),var(--card2));
+  color:white;
+  box-shadow:
+    0 8px 0 rgba(0,0,0,.24),
+    0 18px 28px rgba(0,0,0,.28),
+    inset 0 0 0 4px rgba(0,0,0,.12);
+  padding:22px;
+  overflow:hidden;
+}
+.category-card:nth-child(1){--card1:#4c86a8;--card2:#2e5c79}
+.category-card:nth-child(2){--card1:#587b63;--card2:#37513f}
+.category-card:nth-child(3){--card1:#b68b4f;--card2:#7e5e35}
+.category-card:nth-child(4){--card1:#c56d55;--card2:#8b4537}
+.category-card:nth-child(5){--card1:#8b6b98;--card2:#5d476b}
+.category-card:nth-child(6){--card1:#557f86;--card2:#35545a}
+.category-card:before{
+  width:190px;height:190px;
+  right:-55px;bottom:-70px;
+  background:radial-gradient(circle,rgba(255,255,255,.18),transparent 68%);
+}
+.category-card:after{
+  content:"";
+  position:absolute;
+  inset:11px;
+  border:1px solid rgba(255,255,255,.32);
+  border-radius:12px;
+  pointer-events:none;
+}
+.category-card:hover,.category-card:focus-visible{
+  transform:translateY(-10px) rotate(-1deg) scale(1.02);
+  border-color:#ffe9a8;
+  box-shadow:
+    0 12px 0 rgba(0,0,0,.22),
+    0 28px 42px rgba(0,0,0,.34),
+    0 0 24px rgba(242,211,126,.22),
+    inset 0 0 0 4px rgba(0,0,0,.10);
+}
+.category-card:nth-child(even):hover{transform:translateY(-10px) rotate(1deg) scale(1.02)}
+.category-icon{
+  width:62px;height:62px;
+  border-radius:16px;
+  background:rgba(255,255,255,.18);
+  border:2px solid rgba(255,255,255,.40);
+  color:#fff7df;
+  box-shadow:inset 0 0 0 3px rgba(0,0,0,.08);
+}
+.category-card h2{
+  color:#fff;
+  font-family:'Noto Serif TC',serif;
+  font-size:22px;
+  text-shadow:0 2px 0 rgba(0,0,0,.25);
+}
+.category-card p{
+  color:rgba(255,255,255,.88);
+  font-size:14px;
+  line-height:1.7;
+}
+.home-foot{
+  color:#e0d6c0;
+  font-family:'Noto Serif TC',serif;
+  font-size:16px;
+}
+.card-rarity{
+  position:absolute;
+  right:18px;
+  top:16px;
+  padding:4px 8px;
+  border-radius:999px;
+  background:rgba(28,32,35,.32);
+  border:1px solid rgba(255,255,255,.32);
+  color:#fff2bd;
+  font:600 10px 'JetBrains Mono',monospace;
+  letter-spacing:1px;
+}
+.card-motto{
+  margin-top:14px;
+  padding-top:10px;
+  border-top:1px solid rgba(255,255,255,.25);
+  color:#fff0c5;
+  font-family:'Noto Serif TC',serif;
+  font-size:12px;
+}
+.panel{
+  background:#f4efe4;
+  border-color:#94856c;
+  border-radius:14px;
+  box-shadow:0 8px 0 rgba(0,0,0,.14),0 18px 32px rgba(0,0,0,.18);
+}
+.board-panel{
+  border-top:8px solid #4e7569;
+}
+.panel-title{
+  font-family:'Noto Serif TC',serif;
+  color:#33453f;
+  font-weight:700;
+}
+.category-select{
+  background:#e7dece;
+  border-color:#9f8e72;
+  color:#33413d;
+}
+.board{
+  background:#4d5960;
+  border:3px solid #2f373d;
+  border-radius:10px;
+  box-shadow:0 7px 0 #20262a,0 14px 24px rgba(0,0,0,.20);
+}
+.cell{
+  background:#fffaf0;
+  border-radius:5px;
+  box-shadow:inset 0 0 0 1px #afa38e,0 1px 0 #fff;
+  color:#2b3337;
+  font-family:'Noto Serif TC',serif;
+}
+.cell.block{
+  background:
+    linear-gradient(135deg,#39454b,#2d373c);
+  box-shadow:inset 0 0 0 1px #1f272b;
+}
+.cell.word{background:#e7edd8}
+.cell.active{outline:3px solid #e6a63d}
+.cell.wrong{background:#f0c2bb}
+.cell.right{background:#d3e8d5}
+.current{
+  background:#e7dfd0;
+  border-color:#aa997d;
+  border-left:6px solid #4e7569;
+  border-radius:10px;
+}
+.current small{color:#527165;font-weight:700}
+.current p{font-family:'Noto Serif TC',serif}
+.clue-card{border-top:8px solid #b98745}
+.clue-col h2{
+  color:#4f5d57;
+  border-bottom:2px solid #c0ad8e;
+  padding-bottom:8px;
+}
+.clue{
+  color:#5e6667;
+  border-radius:8px;
+}
+.clue:hover,.clue.selected{
+  background:#e8dfcf;
+  color:#2e3a3a;
+  transform:translateX(2px);
+}
+.control-card{
+  background:#e8dfd0;
+}
+.btn{
+  background:#f6f0e5;
+  color:#39453f;
+  border-color:#9e8d72;
+  border-radius:9px;
+  box-shadow:0 3px 0 #7e6e57;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 0 #7e6e57}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 #7e6e57}
+.btn.primary{
+  background:#4f786c;
+  color:white;
+  border-color:#3d6157;
+  box-shadow:0 3px 0 #2f4b43;
+}
+.modal-bg{background:rgba(20,24,27,.70)}
+.modal{
+  background:#f6f0e5;
+  border:3px solid #8d7d64;
+  border-radius:16px;
+  box-shadow:0 10px 0 rgba(0,0,0,.16),0 28px 60px rgba(0,0,0,.30);
+}
+.modal h2{font-family:'Noto Serif TC',serif}
+.answer-tag{
+  background:#e7dece;
+  border-color:#9f8e72;
+  color:#46564e;
+}
+.answer-clue{
+  background:#eee5d6;
+  border-color:#a89473;
+}
+.answer-input{
+  background:#fffaf0;
+  border-color:#9c8867;
+}
+@media(max-width:900px){
+  .category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .category-grid{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -235,12 +532,12 @@ body{padding-top:92px}
 const CATEGORY_ORDER=['國際情勢','國家安全','全民國防','災害防救','戰史','軍事科技'];
 
 const CATEGORY_INFO={
-'國際情勢':{description:'國際組織、區域衝突、大國競爭與全球安全議題',icon:`<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c5 5 8 10.7 8 17s-3 12-8 17c-5-5-8-10.7-8-17s3-12 8-17Z"/></svg>`},
-'國家安全':{description:'主權、國土安全、認知作戰與社會韌性',icon:`<svg viewBox="0 0 48 48"><path d="M24 5 39 11v10c0 10-6.3 17.8-15 22-8.7-4.2-15-12-15-22V11L24 5Z"/><path d="m17 24 5 5 10-11"/></svg>`},
-'全民國防':{description:'全民參與、防衛動員、民防與國防教育',icon:`<svg viewBox="0 0 48 48"><circle cx="18" cy="16" r="6"/><circle cx="33" cy="18" r="5"/><path d="M7 38c1-8 5-12 11-12s10 4 11 12M28 29c7-2 12 2 13 9"/></svg>`},
-'災害防救':{description:'天然災害、緊急避難、急救與城鎮韌性',icon:`<svg viewBox="0 0 48 48"><path d="M24 6c5 8 11 13 11 21a11 11 0 0 1-22 0c0-5 3-9 7-14 0 6 2 9 5 11 1-7 0-12-1-18Z"/><path d="M18 35c4 2 8 2 12 0"/></svg>`},
-'戰史':{description:'鄭成功復臺、乙未戰爭、古寧頭與八二三砲戰',icon:`<svg viewBox="0 0 48 48"><path d="M10 38V9l22 5-22 6M10 20v18M7 39h10"/><path d="m27 25 11 11M38 25 27 36"/></svg>`},
-'軍事科技':{description:'陸海空武器、飛彈、無人載具與國防自主',icon:`<svg viewBox="0 0 48 48"><path d="M8 31h22l10-7-10-7H8l6 7-6 7Z"/><path d="M19 17 23 8h7l-2 9M19 31l4 9h7l-2-9"/></svg>`}
+'國際情勢':{description:'國際組織、區域衝突、大國競爭與全球安全議題',rarity:'WORLD',motto:'放眼世界，洞察局勢。',icon:`<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c5 5 8 10.7 8 17s-3 12-8 17c-5-5-8-10.7-8-17s3-12 8-17Z"/></svg>`},
+'國家安全':{description:'主權、國土安全、認知作戰與社會韌性',rarity:'SHIELD',motto:'安全，是國家永續發展的基石。',icon:`<svg viewBox="0 0 48 48"><path d="M24 5 39 11v10c0 10-6.3 17.8-15 22-8.7-4.2-15-12-15-22V11L24 5Z"/><path d="m17 24 5 5 10-11"/></svg>`},
+'全民國防':{description:'全民參與、防衛動員、民防與國防教育',rarity:'UNITY',motto:'國防，不只是軍人的責任。',icon:`<svg viewBox="0 0 48 48"><circle cx="18" cy="16" r="6"/><circle cx="33" cy="18" r="5"/><path d="M7 38c1-8 5-12 11-12s10 4 11 12M28 29c7-2 12 2 13 9"/></svg>`},
+'災害防救':{description:'天然災害、緊急避難、急救與城鎮韌性',rarity:'RESCUE',motto:'平時多一分準備，災時少一分損失。',icon:`<svg viewBox="0 0 48 48"><path d="M24 6c5 8 11 13 11 21a11 11 0 0 1-22 0c0-5 3-9 7-14 0 6 2 9 5 11 1-7 0-12-1-18Z"/><path d="M18 35c4 2 8 2 12 0"/></svg>`},
+'戰史':{description:'鄭成功復臺、乙未戰爭、古寧頭與八二三砲戰',rarity:'HISTORY',motto:'鑑往知來，知兵而不好戰。',icon:`<svg viewBox="0 0 48 48"><path d="M10 38V9l22 5-22 6M10 20v18M7 39h10"/><path d="m27 25 11 11M38 25 27 36"/></svg>`},
+'軍事科技':{description:'陸海空武器、飛彈、無人載具與國防自主',rarity:'TECH',motto:'科技，改變戰場，也改變未來。',icon:`<svg viewBox="0 0 48 48"><path d="M8 31h22l10-7-10-7H8l6 7-6 7Z"/><path d="M19 17 23 8h7l-2 9M19 31l4 9h7l-2-9"/></svg>`}
 };
 
 let currentCategory='國際情勢';
@@ -295,7 +592,7 @@ const items=(window.QUESTION_BANK&&window.QUESTION_BANK[name])||[];
 const info=CATEGORY_INFO[name];const card=document.createElement('button');
 card.type='button';card.className='category-card';
 card.setAttribute('aria-label',`進入${name}題庫，共${items.length}題`);
-card.innerHTML=`<span class="category-icon">${info.icon}</span><h2>${name}</h2><p>${info.description}</p>`;
+card.innerHTML=`<span class="card-rarity">${info.rarity}</span><span class="category-icon">${info.icon}</span><h2>${name}</h2><p>${info.description}</p><div class="card-motto">${info.motto}</div>`;
 card.addEventListener('click',()=>enterCategory(name));grid.appendChild(card);
 }}
 function enterCategory(name){
