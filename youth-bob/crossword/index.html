@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>國防縱橫・全民國防教育填字遊戲</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f1410;--surface:#1c221d;--surface2:#242b25;--border:#323b34;--text:#ecebe4;--soft:#a8ada4;--muted:#70776f;--accent:#9dc183;--accent2:#c9e4b5;--amber:#e6b84d;--danger:#dd7165;--correct:#80bd83;--cell:42px}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:'Noto Sans TC',sans-serif}body{padding:16px;background:radial-gradient(ellipse at 20% 0%,rgba(157,193,131,.08),transparent 48%),var(--bg)}button{font:inherit}.app{max-width:1220px;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);padding:4px 2px 14px;margin-bottom:16px}.brand{display:flex;gap:13px;align-items:center}.mark{width:42px;height:42px;border-radius:9px;background:var(--accent);color:#101510;display:grid;place-items:center;font:700 21px 'Noto Serif TC';box-shadow:0 0 0 1px var(--accent2),0 8px 24px rgba(157,193,131,.16)}h1{font:500 23px 'Noto Serif TC';letter-spacing:6px;margin:0}.sub{font:500 9px 'JetBrains Mono';letter-spacing:2px;color:var(--muted);margin-top:5px}.stats{display:flex;gap:8px}.stat{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:7px 12px;text-align:center;min-width:76px}.stat b{font:500 19px 'Noto Serif TC';color:var(--accent2)}.stat span{display:block;font-size:9px;color:var(--muted);letter-spacing:1px}.layout{display:grid;grid-template-columns:minmax(480px,auto) minmax(300px,1fr);gap:16px;align-items:start}.panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 18px 38px -26px #000}.board-panel{padding:14px}.panel-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}.panel-title{font:500 13px 'Noto Serif TC';letter-spacing:4px;color:var(--soft)}.head-actions{display:flex;gap:8px;align-items:center}.category-select{border:1px solid var(--border);background:var(--surface2);color:var(--text);border-radius:20px;padding:5px 10px;font:500 12px 'Noto Sans TC';outline:none}.category-select:focus{border-color:var(--accent)}.badge{font-size:11px;color:var(--accent2);background:rgba(157,193,131,.1);border:1px solid rgba(157,193,131,.25);padding:4px 8px;border-radius:20px}.board-scroll{overflow:auto;padding:5px}.board{display:grid;gap:2px;width:max-content;margin:auto;background:#111611;padding:5px;border-radius:8px}.cell{width:var(--cell);height:var(--cell);position:relative;background:#f1f0e8;border:0;border-radius:3px;color:#172018;display:grid;place-items:center;font:700 23px 'Noto Serif TC';cursor:pointer;user-select:none}.cell.block{background:#121713;cursor:default}.cell .num{position:absolute;left:3px;top:1px;font:700 8px 'JetBrains Mono';color:#59645a}.cell.active{outline:3px solid var(--amber);z-index:3}.cell.word{background:#dfead8}.cell.wrong{background:#f0b5ae}.cell.right{background:#c7e4c6}.side{display:flex;flex-direction:column;gap:12px}.clue-card,.control-card{padding:14px}.current{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:12px}.current small{color:var(--accent);letter-spacing:1px}.current p{margin:5px 0 0;line-height:1.55;font-size:14px}.clues{display:grid;grid-template-columns:1fr 1fr;gap:12px}.clue-col h2{font:600 13px 'Noto Serif TC';letter-spacing:3px;color:var(--accent2);margin:0 0 8px}.clue{display:flex;gap:7px;width:100%;text-align:left;border:0;background:transparent;color:var(--soft);padding:7px 6px;border-radius:6px;cursor:pointer;line-height:1.45;font-size:13px}.clue:hover,.clue.selected{background:var(--surface2);color:var(--text)}.clue strong{min-width:24px;color:var(--amber)}.controls{display:flex;flex-wrap:wrap;gap:8px}.btn{border:1px solid var(--border);background:var(--surface2);color:var(--text);border-radius:7px;padding:9px 13px;cursor:pointer}.btn:hover{border-color:var(--accent);color:var(--accent2)}.btn.primary{background:var(--accent);color:#111611;border-color:var(--accent);font-weight:700}.message{min-height:24px;margin-top:10px;font-size:13px;color:var(--soft)}.message.good{color:var(--correct)}.message.bad{color:var(--danger)}.info{font-size:12px;color:var(--muted);line-height:1.7;margin-top:10px}.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;place-items:center;padding:20px;z-index:20}.modal-bg.show{display:grid}.modal{max-width:450px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;text-align:center}.modal h2{font:700 25px 'Noto Serif TC';margin:0 0 8px}.modal p{color:var(--soft);line-height:1.7}.modal .btn{margin-top:8px}.answer-modal{width:min(470px,100%);text-align:left}.answer-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0}.answer-tag{display:inline-flex;align-items:center;padding:5px 9px;border-radius:20px;background:rgba(157,193,131,.12);border:1px solid rgba(157,193,131,.28);color:var(--accent2);font-size:12px}.answer-clue{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:11px 12px;margin:10px 0 14px;color:var(--text);line-height:1.65}.answer-input{width:100%;border:1px solid var(--border);background:#111611;color:var(--text);border-radius:8px;padding:12px 13px;font:600 20px 'Noto Serif TC';letter-spacing:3px;outline:none}.answer-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(157,193,131,.12)}.answer-help{font-size:12px;color:var(--muted);margin-top:7px;min-height:20px}.answer-help.bad{color:var(--danger)}.answer-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}@media(max-width:900px){.layout{grid-template-columns:1fr}.board-panel{overflow:hidden}.clues{grid-template-columns:1fr}:root{--cell:38px}.top{align-items:flex-start}.stats{display:none}}@media(max-width:520px){body{padding:8px}:root{--cell:34px}.cell{font-size:19px}.brand h1{font-size:18px;letter-spacing:3px}.mark{width:36px;height:36px}.panel{border-radius:9px}}
+
+.home-screen{min-height:calc(100vh - 32px);display:flex;align-items:center;justify-content:center;padding:28px 12px}
+.home-shell{width:min(1080px,100%);margin:auto}
+.home-hero{text-align:center;margin-bottom:28px}
+.home-emblem{width:76px;height:76px;margin:0 auto 16px;border-radius:22px;display:grid;place-items:center;background:linear-gradient(145deg,var(--accent2),var(--accent));color:#111811;box-shadow:0 18px 50px rgba(157,193,131,.18)}
+.home-emblem svg{width:43px;height:43px}
+.home-hero h1{font-size:34px;letter-spacing:8px;margin:0}
+.home-hero p{color:var(--soft);margin:12px auto 0;line-height:1.8;max-width:680px;font-size:14px}
+.category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.category-card{appearance:none;width:100%;min-height:190px;text-align:left;border:1px solid var(--border);background:linear-gradient(150deg,var(--surface2),var(--surface));color:var(--text);border-radius:16px;padding:20px;cursor:pointer;position:relative;overflow:hidden;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.category-card:before{content:"";position:absolute;inset:auto -42px -62px auto;width:150px;height:150px;border-radius:50%;background:rgba(157,193,131,.065)}
+.category-card:hover,.category-card:focus-visible{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 22px 44px -28px #000;outline:none}
+.category-icon{width:58px;height:58px;border-radius:14px;display:grid;place-items:center;background:rgba(157,193,131,.12);border:1px solid rgba(157,193,131,.23);color:var(--accent2);margin-bottom:17px}
+.category-icon svg{width:35px;height:35px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.category-card h2{font:600 20px 'Noto Serif TC';letter-spacing:3px;margin:0 0 7px}
+.category-card p{font-size:12px;line-height:1.65;color:var(--soft);margin:0 0 15px;max-width:92%}
+.category-meta{font:500 11px 'JetBrains Mono';color:var(--accent);letter-spacing:1px}
+.home-foot{text-align:center;color:var(--muted);font-size:11px;margin-top:20px}
+.game-screen{display:none}.game-screen.show{display:block}.home-screen.hidden{display:none}
+.home-btn{border:1px solid var(--border);background:var(--surface);color:var(--soft);border-radius:8px;padding:7px 11px;cursor:pointer}.home-btn:hover{border-color:var(--accent);color:var(--text)}
+.top-right{display:flex;align-items:center;gap:10px}
+@media(max-width:820px){.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-hero h1{font-size:27px}}
+@media(max-width:540px){.category-grid{grid-template-columns:1fr}.category-card{min-height:160px}.home-screen{padding:18px 4px}.home-hero h1{font-size:24px;letter-spacing:5px}}
+</style>
+</head>
+<body>
+
+<section id="homeScreen" class="home-screen">
+<div class="home-shell">
+<div class="home-hero">
+<div class="home-emblem" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 4 39 10v11c0 10-6.3 18.1-15 23-8.7-4.9-15-13-15-23V10L24 4Z" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M16 24h16M24 14v20" stroke="currentColor" stroke-width="2.4"/></svg></div>
+<h1>國防縱橫</h1>
+<p>選擇一個題庫類別，系統將自動產生傳統交叉填字盤面。每個類別均整理自全民國防教育教材，並搭配提示與知識補充。</p>
+</div>
+<div id="categoryGrid" class="category-grid"></div>
+<div class="home-foot">全民國防教育填字遊戲・請選擇題庫開始挑戰</div>
+</div>
+</section>
+<div id="gameScreen" class="game-screen">
+
+<div class="app">
+<header class="top"><div class="brand"><div class="mark">防</div><div><h1>國防縱橫</h1><div class="sub">NATIONAL DEFENSE CROSSWORD</div></div></div><div class="top-right"><button id="homeBtn" class="home-btn" type="button">返回主頁</button><div class="stats"><div class="stat"><b id="progress">0%</b><span>完成度</span></div><div class="stat"><b id="wordCount">0</b><span>題目數</span></div><div class="stat"><b id="timer">00:00</b><span>時間</span></div></div></div></header>
+<main class="layout">
+<section class="panel board-panel"><div class="panel-head"><div class="panel-title" id="boardTitle">國際情勢・隨機題組</div><div class="head-actions"><select id="categorySelect" class="category-select" aria-label="選擇題庫分類"></select><div class="badge" id="difficulty">自動排盤</div></div></div><div class="board-scroll"><div id="board" class="board" aria-label="填字遊戲盤面"></div></div></section>
+<aside class="side">
+<section class="panel clue-card"><div class="current"><small id="currentLabel">請選擇題目</small><p id="currentClue">點選格子或下方提示，即可開始作答。</p></div><div class="clues"><div class="clue-col"><h2>橫向</h2><div id="acrossClues"></div></div><div class="clue-col"><h2>縱向</h2><div id="downClues"></div></div></div></section>
+<section class="panel control-card"><div class="controls"><button class="btn primary" id="checkBtn">檢查答案</button><button class="btn" id="hintBtn">提示一字</button><button class="btn" id="clearBtn">清除錯字</button><button class="btn" id="newBtn">重新出題</button></div><div id="message" class="message"></div><div class="info">操作：單點一般格子會開啟該題；若格子同時屬於橫向與縱向，可先選擇方向。也可按住滑鼠拖曳同一橫列或直欄的連續格子，再一次輸入整段文字。輸入框不限制字數，超出選取格數的文字不會寫入。可從六大分類切換題庫；題目參考《全民國防教育》上、下冊內容。</div></section>
+</aside></main></div>
+</div>
+<div class="modal-bg" id="answerModal"><div class="modal answer-modal" role="dialog" aria-modal="true" aria-labelledby="answerTitle">
+  <h2 id="answerTitle">填入答案</h2>
+  <div class="answer-meta"><span class="answer-tag" id="answerDirection"></span><span class="answer-tag" id="answerLength"></span></div>
+  <div class="answer-clue" id="answerClue"></div>
+  <input id="answerInput" class="answer-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="完整答案輸入框">
+  <div class="answer-help" id="answerHelp"></div>
+  <div class="answer-actions"><button class="btn" id="answerCancel">取消</button><button class="btn primary" id="answerSubmit">填入答案</button></div>
+</div></div>
+<div class="modal-bg" id="directionModal"><div class="modal answer-modal" role="dialog" aria-modal="true">
+  <h2>選擇填入方向</h2>
+  <p>這個格子同時屬於橫向與縱向題目，請選擇要填入哪一題。</p>
+  <div id="directionChoices" class="answer-actions" style="justify-content:center;flex-wrap:wrap"></div>
+  <div class="answer-actions"><button class="btn" id="directionCancel">取消</button></div>
+</div></div>
+<div class="modal-bg" id="modal"><div class="modal"><h2>完成挑戰</h2><p id="modalText"></p><button class="btn primary" id="againBtn">再玩一局</button></div></div>
+<script src="data/question_bank_loader.js"></script>
+<script src="data/international.js"></script>
+<script src="data/national_security.js"></script>
+<script src="data/all_out_defense.js"></script>
+<script src="data/disaster_prevention.js"></script>
+<script src="data/war_history.js"></script>
+<script src="data/military_technology.js"></script>
+<script>
+const CATEGORY_ORDER=['國際情勢','國家安全','全民國防','災害防救','戰史','軍事科技'];
+
+const CATEGORY_INFO={
+'國際情勢':{description:'國際組織、區域衝突、大國競爭與全球安全議題',icon:`<svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7c5 5 8 10.7 8 17s-3 12-8 17c-5-5-8-10.7-8-17s3-12 8-17Z"/></svg>`},
+'國家安全':{description:'主權、國土安全、認知作戰與社會韌性',icon:`<svg viewBox="0 0 48 48"><path d="M24 5 39 11v10c0 10-6.3 17.8-15 22-8.7-4.2-15-12-15-22V11L24 5Z"/><path d="m17 24 5 5 10-11"/></svg>`},
+'全民國防':{description:'全民參與、防衛動員、民防與國防教育',icon:`<svg viewBox="0 0 48 48"><circle cx="18" cy="16" r="6"/><circle cx="33" cy="18" r="5"/><path d="M7 38c1-8 5-12 11-12s10 4 11 12M28 29c7-2 12 2 13 9"/></svg>`},
+'災害防救':{description:'天然災害、緊急避難、急救與城鎮韌性',icon:`<svg viewBox="0 0 48 48"><path d="M24 6c5 8 11 13 11 21a11 11 0 0 1-22 0c0-5 3-9 7-14 0 6 2 9 5 11 1-7 0-12-1-18Z"/><path d="M18 35c4 2 8 2 12 0"/></svg>`},
+'戰史':{description:'鄭成功復臺、乙未戰爭、古寧頭與八二三砲戰',icon:`<svg viewBox="0 0 48 48"><path d="M10 38V9l22 5-22 6M10 20v18M7 39h10"/><path d="m27 25 11 11M38 25 27 36"/></svg>`},
+'軍事科技':{description:'陸海空武器、飛彈、無人載具與國防自主',icon:`<svg viewBox="0 0 48 48"><path d="M8 31h22l10-7-10-7H8l6 7-6 7Z"/><path d="M19 17 23 8h7l-2 9M19 31l4 9h7l-2-9"/></svg>`}
+};
+
+let currentCategory='國際情勢';
+function loadCategory(name){
+  currentCategory=name;
+  const source=(window.QUESTION_BANK&&window.QUESTION_BANK[name])||[];
+  WORDS=source.map(item=>({a:item.answer,c:item.clue,meta:item})).filter(item=>item.a&&item.c&&item.a.length<=21);
+}
+loadCategory(currentCategory);
+const SIZE=21, TARGET=18;
+let state={grid:[],entries:[],selected:null,dir:'A',selectionCells:[],selectionEntry:null,start:Date.now(),timer:null,bounds:null,drag:null};
+const $=id=>document.getElementById(id); const key=(r,c)=>r+','+c;
+function emptyGrid(){return Array.from({length:SIZE},()=>Array.from({length:SIZE},()=>({answer:'',input:'',entries:[],num:0,status:''})))}
+function shuffled(a){return [...a].sort(()=>Math.random()-.5)}
+function canPlace(word,r,c,dir,grid){let dr=dir==='D'?1:0,dc=dir==='A'?1:0;if(r<0||c<0||r+dr*(word.length-1)>=SIZE||c+dc*(word.length-1)>=SIZE)return false;let crosses=0,first=!grid.flat().some(x=>x.answer);for(let i=0;i<word.length;i++){let rr=r+dr*i,cc=c+dc*i,cell=grid[rr][cc];if(cell.answer&&cell.answer!==word[i])return false;if(cell.answer===word[i])crosses++;if(!cell.answer){if(dir==='A'&&((rr>0&&grid[rr-1][cc].answer)||(rr<SIZE-1&&grid[rr+1][cc].answer)))return false;if(dir==='D'&&((cc>0&&grid[rr][cc-1].answer)||(cc<SIZE-1&&grid[rr][cc+1].answer)))return false}}let br=r-dr,bc=c-dc,ar=r+dr*word.length,ac=c+dc*word.length;if(br>=0&&bc>=0&&br<SIZE&&bc<SIZE&&grid[br][bc].answer)return false;if(ar>=0&&ac>=0&&ar<SIZE&&ac<SIZE&&grid[ar][ac].answer)return false;return first||crosses>0}
+function occupiedBounds(grid){let minR=SIZE,maxR=-1,minC=SIZE,maxC=-1;for(let r=0;r<SIZE;r++)for(let c=0;c<SIZE;c++)if(grid[r][c].answer){minR=Math.min(minR,r);maxR=Math.max(maxR,r);minC=Math.min(minC,c);maxC=Math.max(maxC,c)}return maxR<0?{minR:0,maxR:0,minC:0,maxC:0,w:1,h:1}:{minR,maxR,minC,maxC,w:maxC-minC+1,h:maxR-minR+1}}
+function displayBounds(raw){let b={...raw};const MIN=10;let needH=Math.max(0,MIN-b.h),needW=Math.max(0,MIN-b.w);b.minR=Math.max(0,b.minR-Math.floor(needH/2));b.maxR=Math.min(SIZE-1,b.maxR+Math.ceil(needH/2));while(b.maxR-b.minR+1<MIN&&b.minR>0)b.minR--;while(b.maxR-b.minR+1<MIN&&b.maxR<SIZE-1)b.maxR++;b.minC=Math.max(0,b.minC-Math.floor(needW/2));b.maxC=Math.min(SIZE-1,b.maxC+Math.ceil(needW/2));while(b.maxC-b.minC+1<MIN&&b.minC>0)b.minC--;while(b.maxC-b.minC+1<MIN&&b.maxC<SIZE-1)b.maxC++;b.w=b.maxC-b.minC+1;b.h=b.maxR-b.minR+1;return b}
+function scorePlace(word,r,c,dir,grid){let dr=dir==='D'?1:0,dc=dir==='A'?1:0,s=0;for(let i=0;i<word.length;i++)if(grid[r+dr*i][c+dc*i].answer===word[i])s+=18;let center=(SIZE-1)/2;s-=Math.abs(r+dr*(word.length-1)/2-center)+Math.abs(c+dc*(word.length-1)/2-center);let cells=[];for(let i=0;i<word.length;i++)cells.push([r+dr*i,c+dc*i]);let b=occupiedBounds(grid),minR=Math.min(b.minR,...cells.map(x=>x[0])),maxR=Math.max(b.maxR,...cells.map(x=>x[0])),minC=Math.min(b.minC,...cells.map(x=>x[1])),maxC=Math.max(b.maxC,...cells.map(x=>x[1])),h=maxR-minR+1,w=maxC-minC+1;s-=Math.abs(w-h)*3.8;s-=(w*h)*.028;return s+Math.random()}
+function place(item,r,c,dir,grid,entries){let id=entries.length,dr=dir==='D'?1:0,dc=dir==='A'?1:0,e={id,answer:item.a,clue:item.c,meta:item.meta||null,r,c,dir,num:0,cells:[]};entries.push(e);for(let i=0;i<item.a.length;i++){let rr=r+dr*i,cc=c+dc*i,cell=grid[rr][cc];cell.answer=item.a[i];cell.entries.push(id);e.cells.push([rr,cc])}}
+function generate(){if(!WORDS.length)throw new Error('所選分類沒有可用題目');let best=null,bestScore=-Infinity;for(let attempt=0;attempt<550;attempt++){let grid=emptyGrid(),entries=[],pool=shuffled(WORDS);pool.sort((x,y)=>y.a.length-x.a.length+(Math.random()-.5)*6);let first=pool.shift(),dir=Math.random()>.5?'A':'D',r=Math.floor((SIZE-(dir==='D'?first.a.length:1))/2),c=Math.floor((SIZE-(dir==='A'?first.a.length:1))/2);place(first,r,c,dir,grid,entries);for(let item of pool){if(entries.length>=TARGET)break;let opts=[];for(let e of entries)for(let i=0;i<item.a.length;i++)for(let j=0;j<e.answer.length;j++)if(item.a[i]===e.answer[j]){let nd=e.dir==='A'?'D':'A',rr=e.r+(e.dir==='D'?j:0)-(nd==='D'?i:0),cc=e.c+(e.dir==='A'?j:0)-(nd==='A'?i:0);if(canPlace(item.a,rr,cc,nd,grid))opts.push({r:rr,c:cc,dir:nd,s:scorePlace(item.a,rr,cc,nd,grid)})}if(opts.length){opts.sort((x,y)=>y.s-x.s);let o=opts[0];place(item,o.r,o.c,o.dir,grid,entries)}}let b=occupiedBounds(grid),shapePenalty=Math.abs(b.w-b.h)*48,areaPenalty=b.w*b.h*.42,density=entries.length/(b.w*b.h);let score=entries.length*1400-shapePenalty-areaPenalty+density*2200;if(score>bestScore){bestScore=score;best={grid,entries,bounds:b}}}return best}
+function numberEntries(){let starts=new Map(),n=1;for(let e of state.entries){let k=key(e.r,e.c);if(!starts.has(k))starts.set(k,n++);e.num=starts.get(k);state.grid[e.r][e.c].num=e.num}}
+function render(){let board=$('board'),b=displayBounds(state.bounds||occupiedBounds(state.grid));board.innerHTML='';board.style.gridTemplateColumns=`repeat(${b.w},var(--cell))`;for(let r=b.minR;r<=b.maxR;r++)for(let c=b.minC;c<=b.maxC;c++){let cell=state.grid[r][c],el=document.createElement('button');el.className='cell'+(cell.answer?'':' block');el.dataset.r=r;el.dataset.c=c;if(cell.answer){el.innerHTML=(cell.num?`<span class="num">${cell.num}</span>`:'')+`<span class="letter">${cell.input||''}</span>`;el.addEventListener('mousedown',ev=>beginDrag(ev,r,c));el.addEventListener('mouseenter',()=>extendDrag(r,c));}else el.disabled=true;board.appendChild(el)}document.addEventListener('mouseup',endDrag,{once:true});renderClues();$('wordCount').textContent=state.entries.length;updateSelection();updateProgress()}
+function renderClues(){for(let d of ['A','D']){let box=$(d==='A'?'acrossClues':'downClues');box.innerHTML='';state.entries.filter(e=>e.dir===d).sort((a,b)=>a.num-b.num).forEach(e=>{let b=document.createElement('button');b.className='clue';b.dataset.id=e.id;b.innerHTML=`<strong>${e.num}</strong><span>${e.clue}（${e.answer.length}字）</span>`;b.onclick=()=>selectEntry(e.id);box.appendChild(b)})}}
+function beginDrag(ev,r,c){if(ev.button!==0)return;ev.preventDefault();state.drag={start:[r,c],last:[r,c],moved:false};state.selectionCells=[[r,c]];state.selectionEntry=null;state.selected={r,c};updateSelection();document.addEventListener('mouseup',endDrag,{once:true})}
+function extendDrag(r,c){if(!state.drag)return;let [sr,sc]=state.drag.start;if(r!==sr&&c!==sc)return;let cells=[];if(r===sr){let a=Math.min(sc,c),b=Math.max(sc,c);for(let x=a;x<=b;x++){if(!state.grid[r][x].answer)return;cells.push([r,x])}}else{let a=Math.min(sr,r),b=Math.max(sr,r);for(let y=a;y<=b;y++){if(!state.grid[y][c].answer)return;cells.push([y,c])}}state.drag.last=[r,c];state.drag.moved=cells.length>1;state.selectionCells=cells;state.dir=r===sr?'A':'D';updateSelection()}
+function endDrag(){if(!state.drag)return;let d=state.drag;state.drag=null;if(d.moved){openSegmentModal()}else{handleSingleClick(d.start[0],d.start[1])}}
+function handleSingleClick(r,c){let cell=state.grid[r][c];if(!cell.answer)return;let candidates=cell.entries.map(id=>state.entries[id]);state.selected={r,c};state.selectionCells=[];state.selectionEntry=null;if(candidates.length>1){showDirectionChoices(candidates)}else{chooseEntry(candidates[0])}}
+function showDirectionChoices(entries){let box=$('directionChoices');box.innerHTML='';for(let e of entries){let b=document.createElement('button');b.className='btn primary';b.textContent=`${e.num} ${e.dir==='A'?'橫向':'縱向'}（${e.answer.length}字）`;b.onclick=()=>{closeDirectionModal();chooseEntry(e)};box.appendChild(b)}$('directionModal').classList.add('show')}
+function closeDirectionModal(){$('directionModal').classList.remove('show')}
+function chooseEntry(e){state.dir=e.dir;state.selectionEntry=e;state.selectionCells=[...e.cells];state.selected={r:e.r,c:e.c};updateSelection();openAnswerModal(e.clue,`${e.num} ${e.dir==='A'?'橫向':'縱向'}`)}
+function selectEntry(id){chooseEntry(state.entries[id])}
+function sameCell(a,b){return a[0]===b[0]&&a[1]===b[1]}
+function entryForDraggedCells(){let dir=state.dir,cells=state.selectionCells;let candidates=state.entries.filter(e=>e.dir===dir&&cells.every(cell=>e.cells.some(x=>sameCell(x,cell))));if(!candidates.length)return null;let exact=candidates.find(e=>e.cells.length===cells.length&&e.cells.every(cell=>cells.some(x=>sameCell(x,cell))));return exact||candidates.sort((a,b)=>a.cells.length-b.cells.length)[0]}
+function openSegmentModal(){let e=entryForDraggedCells(),dir=state.dir==='A'?'橫向':'縱向';if(e){state.selectionEntry=e;updateSelection();openAnswerModal(e.clue,`${e.num} ${dir}・拖曳選取`)}else{state.selectionEntry=null;let clue=`你已用滑鼠${dir}選取 ${state.selectionCells.length} 格；這段範圍未完整對應單一題目。`;openAnswerModal(clue,`自由選取・${dir}`)}}
+function openAnswerModal(clue,label){let cells=state.selectionCells;if(!cells.length)return;let current=cells.map(([r,c])=>state.grid[r][c].input||'').join('');$('answerDirection').textContent=label;$('answerLength').textContent=`已選取 ${cells.length} 格`;$('answerClue').textContent=clue;$('answerInput').value=current;$('answerInput').removeAttribute('maxlength');$('answerHelp').className='answer-help';$('answerHelp').textContent=`輸入框不限字數；送出時最多寫入前 ${cells.length} 個中文字。`;$('answerModal').classList.add('show');setTimeout(()=>{$('answerInput').focus();$('answerInput').select()},0)}
+function closeAnswerModal(){$('answerModal').classList.remove('show');$('answerInput').value=''}
+function submitSelection(){let cells=state.selectionCells;if(!cells.length)return;let chars=[...$('answerInput').value.trim()].filter(ch=>/[\u3400-\u9fff]/.test(ch));if(!chars.length){$('answerHelp').className='answer-help bad';$('answerHelp').textContent='請至少輸入一個中文字。';return}cells.forEach(([r,c],i)=>{if(i<chars.length){let cell=state.grid[r][c];cell.input=chars[i];cell.status='';refreshCell(r,c)}});let ignored=Math.max(0,chars.length-cells.length);updateProgress();$('message').className='message';$('message').textContent=ignored?`已填入 ${cells.length} 格，另有 ${ignored} 個超出選取範圍的字未寫入。`:`已填入 ${Math.min(chars.length,cells.length)} 格。`;closeAnswerModal()}
+function activeEntry(){return state.selectionEntry}
+function updateSelection(){document.querySelectorAll('.cell').forEach(x=>x.classList.remove('active','word'));document.querySelectorAll('.clue').forEach(x=>x.classList.remove('selected'));for(let [r,c] of state.selectionCells){let el=document.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`);if(el)el.classList.add('word')}if(state.selected){let s=document.querySelector(`.cell[data-r="${state.selected.r}"][data-c="${state.selected.c}"]`);if(s)s.classList.add('active')}let e=state.selectionEntry;if(e){let clue=document.querySelector(`.clue[data-id="${e.id}"]`);if(clue)clue.classList.add('selected');$('currentLabel').textContent=`${e.num} ${e.dir==='A'?'橫向':'縱向'}・${e.answer.length}字`;$('currentClue').textContent=e.clue}else if(state.selectionCells.length>1){$('currentLabel').textContent=`自由選取・${state.dir==='A'?'橫向':'縱向'}・${state.selectionCells.length}格`;$('currentClue').textContent='放開滑鼠後，可一次輸入這段選取範圍的文字。'}else{$('currentLabel').textContent='請選擇題目';$('currentClue').textContent='點選格子、題目提示，或按住滑鼠拖曳連續格子。'}}
+function refreshCell(r,c){let b=document.querySelector(`.cell[data-r="${r}"][data-c="${c}"]`),cell=state.grid[r][c];if(!b)return;b.querySelector('.letter').textContent=cell.input||'';b.classList.remove('wrong','right');if(cell.status)b.classList.add(cell.status)}
+function updateProgress(){let all=0,filled=0;state.grid.flat().forEach(c=>{if(c.answer){all++;if(c.input)filled++}});$('progress').textContent=all?Math.round(filled/all*100)+'%':'0%'}
+function check(){let wrong=0,empty=0;state.grid.flat().forEach(cell=>{if(!cell.answer)return;if(!cell.input){cell.status='';empty++}else if(cell.input===cell.answer)cell.status='right';else{cell.status='wrong';wrong++}});renderStatuses();if(!wrong&&!empty){clearInterval(state.timer);$('message').className='message good';$('message').textContent='全部答對！';$('modalText').textContent=`你完成了 ${state.entries.length} 題，用時 ${$('timer').textContent}。`;$('modal').classList.add('show')}else{$('message').className='message '+(wrong?'bad':'');$('message').textContent=wrong?`有 ${wrong} 個字需要再確認，尚有 ${empty} 格未填。`:`目前答案正確，尚有 ${empty} 格未填。`}}
+function renderStatuses(){for(let r=0;r<SIZE;r++)for(let c=0;c<SIZE;c++)if(state.grid[r][c].answer)refreshCell(r,c)}
+function hint(){let e=activeEntry();if(!e){$('message').textContent='請先從題目提示選擇一題。';return}let target=e.cells.find(([r,c])=>state.grid[r][c].input!==state.grid[r][c].answer);if(!target){$('message').textContent='這一題已經完成。';return}let [r,c]=target;state.grid[r][c].input=state.grid[r][c].answer;state.grid[r][c].status='right';refreshCell(r,c);updateProgress();$('message').className='message good';$('message').textContent='已揭示一個字。'}
+function clearWrong(){let n=0;state.grid.flat().forEach(cell=>{if(cell.input&&cell.input!==cell.answer){cell.input='';cell.status='';n++}});renderStatuses();updateProgress();$('message').className='message';$('message').textContent=n?`已清除 ${n} 個錯字。`:'目前沒有可清除的錯字。'}
+function start(){clearInterval(state.timer);loadCategory(currentCategory);$('boardTitle').textContent=`${currentCategory}・隨機題組`;let made=generate();state.grid=made.grid;state.entries=made.entries;state.bounds=made.bounds;state.selected=null;state.dir='A';state.selectionCells=[];state.selectionEntry=null;state.start=Date.now();numberEntries();render();$('message').className='message';$('message').textContent=`本局已自動排入 ${state.entries.length} 個「${currentCategory}」詞語，實際題目範圍為 ${state.bounds.w}×${state.bounds.h}，顯示區至少為 10×10。`;$('modal').classList.remove('show');state.timer=setInterval(()=>{let sec=Math.floor((Date.now()-state.start)/1000);$('timer').textContent=String(Math.floor(sec/60)).padStart(2,'0')+':'+String(sec%60).padStart(2,'0')},1000)}
+
+function renderHome(){
+const grid=$('categoryGrid');grid.innerHTML='';
+for(const name of CATEGORY_ORDER){
+const items=(window.QUESTION_BANK&&window.QUESTION_BANK[name])||[];
+const info=CATEGORY_INFO[name];const card=document.createElement('button');
+card.type='button';card.className='category-card';
+card.setAttribute('aria-label',`進入${name}題庫，共${items.length}題`);
+card.innerHTML=`<span class="category-icon">${info.icon}</span><h2>${name}</h2><p>${info.description}</p><span class="category-meta">${items.length} 題・自動隨機排盤</span>`;
+card.addEventListener('click',()=>enterCategory(name));grid.appendChild(card);
+}}
+function enterCategory(name){
+currentCategory=name;$('homeScreen').classList.add('hidden');$('gameScreen').classList.add('show');$('categorySelect').value=name;start();window.scrollTo({top:0,behavior:'smooth'});
+}
+function showHome(){
+clearInterval(state.timer);$('gameScreen').classList.remove('show');$('homeScreen').classList.remove('hidden');$('answerModal').classList.remove('show');$('directionModal').classList.remove('show');$('modal').classList.remove('show');window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function initCategorySelector(){const select=$('categorySelect');select.innerHTML='';for(const name of CATEGORY_ORDER){if(!window.QUESTION_BANK[name])continue;const option=document.createElement('option');option.value=name;option.textContent=`${name}（${window.QUESTION_BANK[name].length}題）`;select.appendChild(option)}select.value=currentCategory;select.addEventListener('change',()=>{currentCategory=select.value;start()})}
+initCategorySelector();
+$('answerInput').addEventListener('input',()=>{let chars=[...$('answerInput').value].filter(ch=>/[\u3400-\u9fff]/.test(ch));$('answerHelp').className='answer-help';$('answerHelp').textContent=`目前輸入 ${chars.length} 個中文字；已選取 ${state.selectionCells.length} 格。`});
+$('answerInput').addEventListener('keydown',ev=>{if(ev.key==='Enter'){ev.preventDefault();submitSelection()}else if(ev.key==='Escape'){ev.preventDefault();closeAnswerModal()}});
+$('answerSubmit').onclick=submitSelection;$('answerCancel').onclick=closeAnswerModal;$('directionCancel').onclick=closeDirectionModal;
+$('answerModal').addEventListener('click',ev=>{if(ev.target===$('answerModal'))closeAnswerModal()});$('directionModal').addEventListener('click',ev=>{if(ev.target===$('directionModal'))closeDirectionModal()});
+$('checkBtn').onclick=check;$('hintBtn').onclick=hint;$('clearBtn').onclick=clearWrong;$('newBtn').onclick=start;$('againBtn').onclick=start;$('homeBtn').onclick=showHome;renderHome();showHome();
+</script>
+</body>
+</html>
